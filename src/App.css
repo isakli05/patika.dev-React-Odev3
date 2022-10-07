@@ -1,38 +1,91 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  background-color: #fff; 
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dark {
+  /* background-color: #282c34; */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.light {
+  background-color: #fff;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.current {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: rgba(196, 185, 185, 0.096);
+  border-radius: 5px;
+}
+@media only screen and (min-width: 600px){
+.weather-container {
+  margin-top: 10px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: #fff;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: #585561;
+  column-gap: 10px;
+}
+}
+
+.weather-item {
+  padding: 0 15px;
+}
+
+.temp-color {
+  color: rgb(187, 183, 183);
+}
+.active-temp{
+  font-size: calc(12px + 2vmin);
+}
+#root> div{
+  position: absolute;
+}
+@media only screen and (max-width: 600px){
+  #root> div{
+    position: absolute;
+    left: 350px;
+    top: 100;
+    margin-top: 50px;
+    
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+#cities{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  position: relative;
+  top: -150px;
+  left: -307px;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border:none;
+  background-color: #fff;
+  font-size: calc(9px + 2vmin);
+  margin-bottom: 30px;
+}
+
+#cities > option{
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding:12px 20px;
+  margin-bottom: 5px;
+}
+
+select:focus{
+  outline: none;
 }
