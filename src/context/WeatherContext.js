@@ -10,7 +10,7 @@ export const WeatherProvider = ({ children }) => {
     setWeather,
   };
   useEffect(() => {
-    axios(`https://api.weatherbit.io/v2.0/forecast/daily?city=İstanbul,TR&key=67913ba8dbb14d5eb1f241fbd0ab93a7&days=5`).then((res) => setWeather(res.data));
+    axios(`https://api.weatherbit.io/v2.0/forecast/daily?city=İstanbul,TR&key=348217764e0c4762ad9b8a8923cfd547&days=5`).then((res) => setWeather(res.data));
   }, []);
  
   return (
